@@ -14,7 +14,7 @@ JSON._load('to-do-list')
   // create new app
   app = new App();
 })
-// .then(() => {
-//   // Tell the app to render to <main>
-//   app.render('main');
-// });
+.then(() => {
+  // Tell the app to render to <main>
+  app.render('main');
+});

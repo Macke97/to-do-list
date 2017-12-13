@@ -13,33 +13,45 @@ class App extends Base {
 
   template(){
     return `
-    <div class="row">
-      <div class="col-4">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
-          <span class="input-group-btn">
-            <button class="btn btn-secondary" type="button">Go!</button>
-          </span>
+    <div>
+      <div class="row mt-4">
+        <div class="col-4">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Add to top" aria-label="Add to top">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="button">Go!</button>
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-4">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
-          <span class="input-group-btn">
-            <button class="btn btn-secondary" type="button">Go!</button>
-          </span>
+      <div class="row mt-4">
+        <div class="col-4">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Add to bottom" aria-label="Add to bottom">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="button">Go!</button>
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-4">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
-          <span class="input-group-btn">
-            <button class="btn btn-secondary" type="button">Go!</button>
-          </span>
+      <div class="row mt-4">
+        <div class="col-4">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Remove from top" aria-label="Remove from top">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="button">Go!</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-4">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Remove from bottom" aria-label="Remove from bottom">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="button">Go!</button>
+            </span>
+          </div>
         </div>
       </div>
     </div>
