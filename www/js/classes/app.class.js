@@ -15,7 +15,7 @@ class App extends Base {
     return `
     <div>
       <div class="row mt-4">
-        <div class="col-4">
+        <div class="col-6">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Add to top" aria-label="Add to top">
             <span class="input-group-btn">
@@ -23,9 +23,7 @@ class App extends Base {
             </span>
           </div>
         </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-4">
+        <div class="col-6">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Add to bottom" aria-label="Add to bottom">
             <span class="input-group-btn">
@@ -35,7 +33,7 @@ class App extends Base {
         </div>
       </div>
       <div class="row mt-4">
-        <div class="col-4">
+        <div class="col-6">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Remove from top" aria-label="Remove from top">
             <span class="input-group-btn">
@@ -43,9 +41,7 @@ class App extends Base {
             </span>
           </div>
         </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-4">
+        <div class="col-6">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Remove from bottom" aria-label="Remove from bottom">
             <span class="input-group-btn">
