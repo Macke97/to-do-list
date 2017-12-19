@@ -1,0 +1,13 @@
+{
+  "app": {
+    "toDoList": {
+      "items": [],
+      "item": {
+        "↻": "$.app"
+      },
+      "todo": [],
+      "⚙": "ToDoList"
+    },
+    "⚙": "App"
+  }
+}

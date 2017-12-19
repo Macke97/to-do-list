@@ -1,6 +1,6 @@
 class ListItem {
 
-  constructor(index){
+  constructor(item){
     this.index = index;
   }
 
