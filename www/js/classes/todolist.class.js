@@ -4,12 +4,14 @@ class ToDoList extends Base{
     super();
     this.app = app;
     this.items = [];
+    this.item = new ListItem(this);
   }
 
-  addItem(){
-    let item = $('.itemName').val();
+  addItem(item){
     this.items.push(item);
-    this.app.render();
+    app.render();
+    console.log(this.items);
+
   }
 
   template(){
@@ -17,8 +19,12 @@ class ToDoList extends Base{
                   <div class col-6>
                     <ul class="list-group itemList">`;
 
-    for(item of this.items) {
-      html += item.html();
+
+    for(let item in this.items) {
+      let index = this.items.length - 1;
+      this.item.item = this.items[index];
+      html += this.item.html();
+      index--;
     }
 
     html += `</ul>
