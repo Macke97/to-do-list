@@ -4,27 +4,45 @@ class ToDoList extends Base{
     super();
     this.app = app;
     this.items = [];
-    this.item = new ListItem(this);
   }
 
   addItem(item){
-    this.items.push(item);
+    this.items.unshift(new ListItem(this, item));
     app.render();
     console.log(this.items);
+  }
 
+  makeDone(){
+
+      let index;
+      //Loop through list to add class move to every checked checkbox
+      for(let item in this.items){
+        index = item;
+      }
+      $('.checkbox:checked').each((i, box)=>{
+        let text = $(box).parent().data('item');
+        app.doneList.items.push(text);
+        app.doneList.addItem(text);
+
+        let removeIndex = this.items.findIndex((item)=> item.item == text);
+        console.log(removeIndex, text);
+        if (removeIndex >= 0) {
+          this.items.splice(removeIndex, 1);
+        }
+      });
+      app.render();
+      console.log("Done list array: " + app.doneList.items);
+      console.log("Todo array: " + this.items);
   }
 
   template(){
-    let html = `<div class="row">
+    let html = `<div class="row ml-4">
                   <div class col-6>
                     <ul class="list-group itemList">`;
 
-
-    for(let item in this.items) {
-      let index = this.items.length - 1;
-      this.item.item = this.items[index];
-      html += this.item.html();
-      index--;
+    for(let item of this.items) {
+      console.log(item);
+      html += item.template();
     }
 
     html += `</ul>
@@ -34,20 +52,6 @@ class ToDoList extends Base{
 
     return html;
 
-    // return `
-    // <div col-6>
-    //   <ul class="list-group">
-    //     <li class="list-group-item">${this.items}</li>
-    //   </ul>
-    // </div>`;
   }
-
-  // template2(){
-  //   return `
-  //   <div>
-  //     ${this.item}
-  //   </div>
-  //   `
-  // }
 
 }

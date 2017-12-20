@@ -5,24 +5,20 @@
         "↻": "$.app"
       },
       "items": [
-        "hej",
-        "robin",
-        "marcus",
-        "hej",
-        "san",
-        "hej",
-        "san"
+        {
+          "list": {
+            "↻": "$.app.toDoList"
+          },
+          "item": "Hej",
+          "⚙": "ListItem"
+        }
       ],
-      "item": {
-        "list": {
-          "↻": "$.app.toDoList"
-        },
-        "item": "san",
-        "⚙": "ListItem"
-      },
       "⚙": "ToDoList"
     },
     "doneList": {
+      "app": {
+        "↻": "$.app"
+      },
       "items": [],
       "⚙": "DoneList"
     },

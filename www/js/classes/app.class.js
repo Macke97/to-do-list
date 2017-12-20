@@ -18,6 +18,9 @@ class App extends Base {
     if(el.hasClass('addBtn')){
       this.toDoList.addItem($('.itemName').val());
     }
+    if(el.hasClass('doneBtn')){
+      this.toDoList.makeDone();
+    }
 
   }
 
@@ -25,11 +28,11 @@ class App extends Base {
     return `
     <div>
       <div class="row mt-4">
-        <div class="col-4">
+        <div class="col-12 col-md-6">
           <div class="input-group">
-            <input type="text" class="form-control itemName" placeholder="Add to top" aria-label="Add to top">
+            <input type="text" class="form-control itemName" placeholder="Add to top" aria-label="Add to list">
             <span class="input-group-btn">
-              <button class="btn btn-secondary addBtn" type="button">Go!</button>
+              <button class="btn btn-secondary addBtn" type="button">Add</button>
             </span>
           </div>
         </div>
@@ -39,15 +42,15 @@ class App extends Base {
           <h1>Todo List</h1>
         </div>
         <div class="col-4 nopadding">
-          <i class="fas fa-angle-double-right arrow"></i>
+          <i class="fas fa-angle-double-right arrow doneBtn"></i>
         </div>
-        <div class="col-4 nopadding">
+        <div class="col-4 nopadding mr-3">
           <h1>Done list</h1>
         </div>
       </div>
       <div class="row">
-        <div class="todo-list">${this.toDoList.html()}</div>
-        <div class="done-list"></div>
+        <div class="todo-list col-6">${this.toDoList.html()}</div>
+        <div class="done-list col-6">${this.doneList.html()}</div>
       </div>
     </div>
     `;
