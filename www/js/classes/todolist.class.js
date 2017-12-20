@@ -12,27 +12,24 @@ class ToDoList extends Base{
     console.log(this.items);
   }
 
+  removeItem(text){
+
+    let removeIndex = this.items.findIndex((item)=> item.item == text);
+    console.log(removeIndex, text);
+    if (removeIndex >= 0) {
+      this.items.splice(removeIndex, 1);
+    }
+  }
+
   makeDone(){
-
-      let index;
-      //Loop through list to add class move to every checked checkbox
-      for(let item in this.items){
-        index = item;
-      }
-      $('.checkbox:checked').each((i, box)=>{
-        let text = $(box).parent().data('item');
-        app.doneList.items.push(text);
-        app.doneList.addItem(text);
-
-        let removeIndex = this.items.findIndex((item)=> item.item == text);
-        console.log(removeIndex, text);
-        if (removeIndex >= 0) {
-          this.items.splice(removeIndex, 1);
-        }
-      });
-      app.render();
-      console.log("Done list array: " + app.doneList.items);
-      console.log("Todo array: " + this.items);
+    $('.checkbox:checked').each((i, box)=>{
+      let text = $(box).parent().data('item');
+      app.doneList.addItem(text);
+      this.removeItem(text);
+    });
+    app.render();
+    console.log("Done list array: " + app.doneList.items);
+    console.log("Todo array: " + this.items);
   }
 
   template(){

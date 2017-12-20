@@ -4,15 +4,7 @@
       "app": {
         "↻": "$.app"
       },
-      "items": [
-        {
-          "list": {
-            "↻": "$.app.toDoList"
-          },
-          "item": "Hej",
-          "⚙": "ListItem"
-        }
-      ],
+      "items": [],
       "⚙": "ToDoList"
     },
     "doneList": {

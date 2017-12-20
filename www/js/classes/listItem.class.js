@@ -18,7 +18,7 @@ class ListItem extends Base{
     } else if(this.list == app.doneList){
       return `<div>
                 <li class="list-group-item" data-item="${this.item}">
-                  ${this.item}
+                  ${this.item}<button class="btn btn-secondary removeBtn" type="button">X</button>
                 </li>
               </div>`;
     }

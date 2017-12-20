@@ -22,6 +22,9 @@ class App extends Base {
       this.toDoList.makeDone();
     }
 
+    if(el.hasClass('removeBtn')){
+      this.doneList.removeItem(el.closest('li').data('item'));
+    }
   }
 
   template(){
