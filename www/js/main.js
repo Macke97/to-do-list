@@ -4,7 +4,7 @@ let app;
 JSON._classes(App, ToDoList, DoneList, ListItem);
 
 // Load json data
-JSON._load('todo-list.')
+JSON._load('todo-list')
 .then((data) => {
   // Retrieve the app from JSON
   app = data.app;

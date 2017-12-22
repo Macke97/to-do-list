@@ -6,6 +6,8 @@ class ToDoList extends Base{
     this.items = [];
   }
 
+
+
   addItem(item){
     this.items.unshift(new ListItem(this, item));
     app.render();
@@ -13,13 +15,27 @@ class ToDoList extends Base{
   }
 
   removeItem(text){
-
     let removeIndex = this.items.findIndex((item)=> item.item == text);
     console.log(removeIndex, text);
     if (removeIndex >= 0) {
       this.items.splice(removeIndex, 1);
     }
   }
+
+
+
+  moveDown(text){
+    let index = this.items.findIndex((item)=> item.item == text);
+
+    if(index + 1 < this.items.length) {
+      this.items[index] = this.items[index + 1];
+      this.items[index + 1] = item.item; // Console gives "item is not defined"
+    }
+    app.render();
+  }
+
+
+
 
   makeDone(){
     $('.checkbox:checked').each((i, box)=>{

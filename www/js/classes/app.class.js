@@ -25,6 +25,9 @@ class App extends Base {
     if(el.hasClass('removeBtn')){
       this.doneList.removeItem(el.closest('li').data('item'));
     }
+    if(el.hasClass('btnDown')){
+      this.toDoList.moveDown(el.closest('li').data('item'));
+    }
   }
 
   template(){
@@ -45,7 +48,7 @@ class App extends Base {
           <h1>Todo List</h1>
         </div>
         <div class="col-4 nopadding">
-          <i class="fas fa-angle-double-right arrow doneBtn"></i>
+          <i class="fas fa-angle-double-right doneBtn"></i>
         </div>
         <div class="col-4 nopadding mr-3">
           <h1>Done list</h1>
