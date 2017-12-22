@@ -18,3 +18,10 @@ JSON._load('todo-list')
   // Tell the app to render to <main>
   app.render('main');
 });
+
+$(document).on('keyup', '.itemName', function(e){
+  let key = e.which;
+  if(key == 13){
+    $('.addBtn').trigger('click');
+  }
+});

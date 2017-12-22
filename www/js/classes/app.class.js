@@ -12,12 +12,22 @@ class App extends Base {
     // this.toDoList.render('.todo-list')
     // toDoList.render('.todo-list')
     JSON._save('todo-list', {app: this});
+    let input = $('.itemName');
+    input.focus();
+    input.select();
   }
 
   click(el, event){
     if(el.hasClass('addBtn')){
-      this.toDoList.addItem($('.itemName').val());
+      let inputValue = $('.itemName').val();
+      let re = /^[\w ]+$/;
+      if(inputValue.length < 1 || !($.type(inputValue) === "string") || !inputValue.replace(/^\s+/g, '').length){
+        $('#errorModal').modal('toggle');
+      } else {
+        this.toDoList.addItem(inputValue);
+      }
     }
+
     if(el.hasClass('doneBtn')){
       this.toDoList.makeDone();
     }
@@ -36,7 +46,7 @@ class App extends Base {
       <div class="row mt-4">
         <div class="col-12 col-md-6">
           <div class="input-group">
-            <input type="text" class="form-control itemName" placeholder="Add to top" aria-label="Add to list">
+            <input type="text" class="form-control itemName" placeholder="Add to list" aria-label="Add to list">
             <span class="input-group-btn">
               <button class="btn btn-secondary addBtn" type="button">Add</button>
             </span>

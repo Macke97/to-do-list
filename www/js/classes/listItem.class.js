@@ -14,7 +14,9 @@ class ListItem extends Base{
                 <li class="list-group-item" data-item="${this.item}">
                   ${this.item}
                   <input class="form-check-input checkbox" type="checkbox" value="">
-                  <i class="fas fa-angle-down arrow btnDown"></i><i class="fas fa-angle-up arrow btnUp"></i>
+                  <div class="moveArrows">
+                    <i class="fas fa-angle-down arrow btnDown"></i><i class="fas fa-angle-up arrow btnUp"></i>
+                  </div>
                 </li>
               </div>`;
     } else if(this.list == app.doneList){
