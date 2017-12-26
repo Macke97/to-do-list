@@ -15,7 +15,8 @@ class ListItem extends Base{
                   ${this.item}
                   <input class="form-check-input checkbox" type="checkbox" value="">
                   <div class="moveArrows">
-                    <i class="fas fa-angle-down arrow btnDown"></i><i class="fas fa-angle-up arrow btnUp"></i>
+                    <button class="btnDown"><i class="fas fa-angle-down arrow btnDown"></i></button>
+                    <button class="btnUp"><i class="fas fa-angle-up arrow btnUp"></i></button>
                   </div>
                 </li>
               </div>`;
