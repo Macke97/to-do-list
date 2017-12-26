@@ -4,31 +4,7 @@
       "app": {
         "↻": "$.app"
       },
-      "items": [
-        {
-          "list": {
-            "↻": "$.app.toDoList"
-          },
-          "item": "geh",
-          "⚙": "ListItem"
-        },
-        {
-          "list": {
-            "↻": "$.app.toDoList"
-          },
-          "item": {
-            "list": {
-              "↻": "$.app.toDoList"
-            },
-            "item": "hejsan",
-            "⚙": "ListItem"
-          },
-          "⚙": "ListItem"
-        },
-        {
-          "↻": "$.app.toDoList.items[1].item"
-        }
-      ],
+      "items": [],
       "⚙": "ToDoList"
     },
     "doneList": {

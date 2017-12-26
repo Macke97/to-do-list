@@ -19,6 +19,12 @@ i.doneBtn {
   float: left;
   margin-right: 2px;
 }
+.disabled {
+  cursor: default !important;
+}
+.btn {
+  cursor: pointer;
+}
 .removeBtn {
   cursor: pointer;
   margin-left: 20px;
