@@ -4,7 +4,7 @@ class ListItem extends Base{
     super();
     this.list = list;
     this.item = item;
-    console.log(item);
+    // console.log('ListItem class says: ' + item);
   }
 
 

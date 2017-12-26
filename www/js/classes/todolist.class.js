@@ -33,15 +33,25 @@ class ToDoList extends Base{
 
   moveDown(text){
     let index = this.items.findIndex((item)=> item.item == text);
-
-    if(index + 1 < this.items.length) {
+    console.log(index);
+    let thing = this.items[index];
+    if((index + 1) < this.items.length) {
       this.items[index] = this.items[index + 1];
-      this.items[index + 1] = item.item; // Console gives "item is not defined"
+      this.items[index + 1] = thing;
     }
     app.render();
   }
 
-
+  moveUp(text){
+    let index = this.items.findIndex((item)=> item.item == text);
+    console.log(index);
+    let thing = this.items[index];
+    if(index > 0) {
+      this.items[index] = this.items[index - 1];
+      this.items[index - 1] = thing;
+    }
+    app.render();
+  }
 
 
   makeDone(){

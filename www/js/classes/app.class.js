@@ -36,6 +36,10 @@ class App extends Base {
       this.toDoList.moveDown(el.closest('li').data('item'));
     }
 
+    if(el.hasClass('btnUp')){
+      this.toDoList.moveUp(el.closest('li').data('item'));
+    }
+
     if(el.hasClass('clearDoneBtn')){
       this.doneList.clearAll();
       app.render();
