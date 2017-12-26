@@ -12,9 +12,6 @@ class App extends Base {
     // this.toDoList.render('.todo-list')
     // toDoList.render('.todo-list')
     JSON._save('todo-list', {app: this});
-    let input = $('.itemName');
-    input.focus();
-    input.select();
   }
 
   click(el, event){
@@ -38,13 +35,23 @@ class App extends Base {
     if(el.hasClass('btnDown')){
       this.toDoList.moveDown(el.closest('li').data('item'));
     }
+
+    if(el.hasClass('clearDoneBtn')){
+      this.doneList.clearAll();
+      app.render();
+    }
+    if(el.hasClass('clearAllBtn')){
+      this.toDoList.clearAll();
+      this.doneList.clearAll();
+      app.render();
+    }
   }
 
   template(){
     return `
     <div>
       <div class="row mt-4">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-8">
           <div class="input-group">
             <input type="text" class="form-control itemName" placeholder="Add to list" aria-label="Add to list">
             <span class="input-group-btn">
@@ -52,13 +59,19 @@ class App extends Base {
             </span>
           </div>
         </div>
+        <!-- End of column -->
+        <div class="col-12 col-md-4 mt-2 mt-md-0">
+          <button class="btn btn-secondary clearDoneBtn" type="button">Clear all done</button>
+          <button class="btn btn-secondary clearAllBtn" type="button">Clear all</button>
+        </div>
       </div>
+      <!-- End of row -->
       <div class="row mt-4">
         <div class="col-4 nopadding">
           <h1>Todo List</h1>
         </div>
         <div class="col-4 nopadding">
-          <i class="fas fa-angle-double-right doneBtn"></i>
+          <button class="doneBtn"><i class="fas fa-angle-double-right doneBtn justify-content-center"></i></button>
         </div>
         <div class="col-4 nopadding mr-3">
           <h1>Done list</h1>

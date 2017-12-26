@@ -2,15 +2,26 @@
   font-size: 50px;
   display: block;
   margin: 0 auto;
-  width: 45px;
   float: none;
   position: relative;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
 }
 .doneBtn:hover {
   cursor: pointer;
 }
-button {
+.doneBtn:focus {
+  outline: none;
+}
+i.doneBtn {
+  float: left;
+  margin-right: 2px;
+}
+.removeBtn {
   cursor: pointer;
+  margin-left: 20px;
 }
 .nopadding {
   padding: 0 !important;
@@ -19,8 +30,14 @@ button {
 main h1 {
   text-align: center;
 }
+@media (max-width: 767px) {
+  main h1 {
+    font-size: 30px;
+  }
+}
 main li {
   font-size: 30px;
+  word-break: break-all;
 }
 .form-check-input {
   display: inline-block;

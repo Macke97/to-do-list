@@ -11,6 +11,9 @@ class ToDoList extends Base{
   addItem(item){
     this.items.unshift(new ListItem(this, item));
     app.render();
+    let input = $('.itemName');
+    input.focus();
+    input.select();
     console.log(this.items);
   }
 
@@ -20,6 +23,10 @@ class ToDoList extends Base{
     if (removeIndex >= 0) {
       this.items.splice(removeIndex, 1);
     }
+  }
+
+  clearAll(){
+    this.items.length = 0;
   }
 
 

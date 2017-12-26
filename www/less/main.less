@@ -2,16 +2,42 @@
   font-size: 50px;
   display: block;
   margin: 0 auto;
-  width: 45px;
+  // width: 40px;
   float: none;
   position: relative;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
   &:hover{
     cursor: pointer;
   }
+  &:focus{
+    outline: none;
+  }
 }
 
-button{
+i.doneBtn{
+  float: left;
+  margin-right: 2px;
+}
+
+// button.doneBtn {
+//   background-color: Transparent;
+//   background-repeat: no-repeat;
+//   border: none;
+//   cursor: pointer;
+//   overflow: hidden;
+//   outline: none;
+// }
+
+.removeBtn{
   cursor: pointer;
+  margin-left: 20px;
+}
+
+.clearBtn{
+  // font-size: 10px;
 }
 
 .nopadding {
@@ -22,9 +48,13 @@ button{
 main {
   h1{
     text-align: center;
+    @media(max-width:767px){
+      font-size: 30px;
+    }
   }
   li{
     font-size: 30px;
+    word-break: break-all;
   }
 }
 

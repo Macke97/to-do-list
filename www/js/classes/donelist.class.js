@@ -21,6 +21,10 @@ class DoneList extends Base{
     app.render();
   }
 
+  clearAll(){
+    this.items.length = 0;
+  }
+
   template(){
     let html = `<div class="row mr-4">
                   <div class col-6>
