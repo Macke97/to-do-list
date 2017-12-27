@@ -25,3 +25,10 @@ $(document).on('keyup', '.itemName', function(e){
     $('.addBtn').trigger('click');
   }
 });
+
+$(document).on('keyup', '.checkbox:checked', function(e){
+  let key = e.which;
+  if(key == 13){
+    $('.doneBtn').trigger('click');
+  }
+});
