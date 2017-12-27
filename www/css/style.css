@@ -16,6 +16,9 @@
 .doneBtn:focus {
   outline: none;
 }
+.navbar-brand:hover {
+  cursor: default;
+}
 i.doneBtn {
   float: left;
   margin-right: 2px;

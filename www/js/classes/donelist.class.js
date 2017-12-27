@@ -8,13 +8,11 @@ class DoneList extends Base{
 
   addItem(item){
     this.items.unshift(new ListItem(this, item));
-    // console.log(this.items);
   }
 
   removeItem(text){
 
     let removeIndex = this.items.findIndex((item)=> item.item == text);
-    console.log(removeIndex, text);
     if (removeIndex >= 0) {
       this.items.splice(removeIndex, 1);
     }

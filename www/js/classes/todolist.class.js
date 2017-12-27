@@ -14,12 +14,10 @@ class ToDoList extends Base{
     let input = $('.itemName');
     input.focus();
     input.select();
-    console.log(this.items);
   }
 
   removeItem(text){
     let removeIndex = this.items.findIndex((item)=> item.item == text);
-    console.log(removeIndex, text);
     if (removeIndex >= 0) {
       this.items.splice(removeIndex, 1);
     }
@@ -33,7 +31,6 @@ class ToDoList extends Base{
 
   moveDown(text){
     let index = this.items.findIndex((item)=> item.item == text);
-    console.log(index);
     let thing = this.items[index];
     if((index + 1) < this.items.length) {
       this.items[index] = this.items[index + 1];
@@ -44,7 +41,6 @@ class ToDoList extends Base{
 
   moveUp(text){
     let index = this.items.findIndex((item)=> item.item == text);
-    console.log(index);
     let thing = this.items[index];
     if(index > 0) {
       this.items[index] = this.items[index - 1];
@@ -61,8 +57,6 @@ class ToDoList extends Base{
       this.removeItem(text);
     });
     app.render();
-    console.log("Done list array: " + app.doneList.items);
-    console.log("Todo array: " + this.items);
   }
 
   template(){
@@ -71,7 +65,6 @@ class ToDoList extends Base{
                     <ul class="list-group itemList">`;
 
     for(let item of this.items) {
-      console.log(item);
       html += item.template();
     }
 
