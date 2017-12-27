@@ -4,7 +4,7 @@ let app;
 JSON._classes(App, ToDoList, DoneList, ListItem);
 
 // Load json data
-JSON._load('to-do-list')
+JSON._load('todo-list')
 .then((data) => {
   // Retrieve the app from JSON
   app = data.app;
@@ -17,4 +17,11 @@ JSON._load('to-do-list')
 .then(() => {
   // Tell the app to render to <main>
   app.render('main');
+});
+
+$(document).on('keyup', '.itemName', function(e){
+  let key = e.which;
+  if(key == 13){
+    $('.addBtn').trigger('click');
+  }
 });

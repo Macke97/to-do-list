@@ -7,29 +7,84 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/libs/bootstrap-4-beta.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
     <!-- Application specific CSS -->
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/style.css">
 
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">To-do-list</a>
-      </nav>
+    <header class="container-fluid">
+      <div class="row">
+        <nav class="col-12 navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">Todo List</a>
+          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+          <div class="" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link"  data-toggle="modal" data-target=".instructionsModal" href="#">Instructions <span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
+
+    <!-- data-toggle="modal" data-target=".instructionsModal" -->
 
     <main class="container">
     </main>
+    <div class="modal fade" id="errorModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">There was a problem with your input</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Field cannot be empty and must contain valid characters!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="modal fade instructionsModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Instructions</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>1. Add an item to the list by writing text in the input field and click "add".</p>
+            <p>2. When todo item is done, check the checkbox and click the the big arrow in the middle.</p>
+            <p>3. Click the X-button, Clear all-button or the Clear all done-button to clear the Done list.</p>
+            <p>You can also use the small arrows underneath the todos to move them up and down the list.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- JavaScript libraries -->
     <script src="/jsonflex.js"></script>
     <script src="/js/libs/jquery-3.2.1.js"></script>
     <script src="/js/libs/popper-1.11.0.js"></script>
+    <script src="\js\libs\bootstrap-4-beta.js"></script>
     <script src="/js/classes/base.class.js"></script>
     <script src="/js/classes/app.class.js"></script>
     <script src="/js/classes/todolist.class.js"></script>
     <script src="/js/classes/donelist.class.js"></script>
-    <script src="/js/classes/listItems.class.js"></script>
+    <script src="/js/classes/listItem.class.js"></script>
     <!-- Application specific JavaScript -->
     <script src="/js/main.js"></script>
   </body>

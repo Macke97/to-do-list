@@ -1,0 +1,25 @@
+{
+  "app": {
+    "toDoList": {
+      "app": {
+        "↻": "$.app"
+      },
+      "items": [],
+      "⚙": "ToDoList"
+    },
+    "doneList": {
+      "app": {
+        "↻": "$.app"
+      },
+      "items": [],
+      "⚙": "DoneList"
+    },
+    "listItem": {
+      "list": {
+        "↻": "$.app"
+      },
+      "⚙": "ListItem"
+    },
+    "⚙": "App"
+  }
+}

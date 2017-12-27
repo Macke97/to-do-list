@@ -1,0 +1,97 @@
+.doneBtn {
+  font-size: 50px;
+  display: block;
+  margin: 0 auto;
+  // width: 40px;
+  float: none;
+  position: relative;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  &:hover{
+    cursor: pointer;
+  }
+  &:focus{
+    outline: none;
+  }
+}
+
+i.doneBtn{
+  float: left;
+  margin-right: 2px;
+}
+
+// button.doneBtn {
+//   background-color: Transparent;
+//   background-repeat: no-repeat;
+//   border: none;
+//   cursor: pointer;
+//   overflow: hidden;
+//   outline: none;
+// }
+
+.disabled{
+  cursor: default !important;
+}
+
+.btn{
+  cursor: pointer;
+  background-color: grey;
+}
+
+.removeBtn{
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+main {
+  h1{
+    text-align: center;
+    @media(max-width:767px){
+      font-size: 30px;
+    }
+  }
+  li{
+    font-size: 30px;
+    word-break: break-all;
+  }
+}
+
+.form-check-input{
+  display: inline-block;
+  margin: 0;
+  right: 0;
+  top: 18px;
+  width: 20px;
+  height: 35px;
+}
+
+.arrow{
+  font-size: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.moveArrows{
+  right: 0;
+}
+
+.todo-list, .done-list{
+  border: 1px solid black;
+  background-color: lightyellow;
+}
+
+.list-group-item{
+	border: 1px solid black;
+  padding-left: 20px;
+}
