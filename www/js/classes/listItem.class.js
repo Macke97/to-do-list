@@ -4,14 +4,12 @@ class ListItem extends Base{
     super();
     this.list = list;
     this.item = item;
-    // console.log('ListItem class says: ' + item);
   }
 
 
   template(){
     if(this.list == app.toDoList){
-      console.log(this.item);
-      console.log(this);
+
       if(this === app.toDoList.items[0]){
         return `<div>
                   <li class="list-group-item" data-item="${this.item}">
