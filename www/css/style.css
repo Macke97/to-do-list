@@ -24,6 +24,7 @@ i.doneBtn {
 }
 .btn {
   cursor: pointer;
+  background-color: grey;
 }
 .removeBtn {
   cursor: pointer;
