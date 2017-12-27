@@ -9,6 +9,7 @@ class App extends Base {
   render(el){
     //Call render from parent class (Base class)
     super.render(el);
+    //Find first child with class btnUp and last child btnDown and disable them
     $('ul.itemList > :first-child .btnUp').addClass('disabled');
     $('ul.itemList > :last-child .btnDown').addClass('disabled');
     JSON._save('todo-list', {app: this});
