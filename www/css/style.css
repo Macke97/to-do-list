@@ -61,6 +61,11 @@ main li {
   top: 18px;
   zoom: 2.5;
 }
+@media (max-width: 767px) {
+  .form-check-input {
+    zoom: 1.5;
+  }
+}
 .arrow {
   font-size: 30px;
   margin-left: 10px;
