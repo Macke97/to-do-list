@@ -61,8 +61,8 @@ class ToDoList extends Base{
   }
 
   template(){
-    let html = `<div class="row ml-4">
-                  <div class col-6>
+    let html = `<div class="row justify-content-start justify-content-md-center">
+                  <div class="col-12">
                     <ul class="list-group itemList">`;
 
     for(let item of this.items) {

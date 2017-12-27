@@ -24,8 +24,8 @@ class DoneList extends Base{
   }
 
   template(){
-    let html = `<div class="row mr-4">
-                  <div class col-6>
+    let html = `<div class="row justify-content-end justify-content-md-center">
+                  <div class="col-12">
                     <ul class="list-group itemList">`;
 
     for(let item of this.items) {
