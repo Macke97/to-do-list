@@ -11,6 +11,7 @@
 }
 .doneBtn:hover {
   cursor: pointer;
+  opacity: 0.8;
 }
 .doneBtn:focus {
   outline: none;
@@ -18,6 +19,7 @@
 i.doneBtn {
   float: left;
   margin-right: 2px;
+  color: white;
 }
 .disabled {
   cursor: default !important;
@@ -34,8 +36,11 @@ i.doneBtn {
   padding: 0 !important;
   margin: 0 !important;
 }
+li a:focus {
+  outline: none;
+}
 main h1 {
-  text-align: center;
+  color: white;
 }
 @media (max-width: 767px) {
   main h1 {
@@ -51,8 +56,7 @@ main li {
   margin: 0;
   right: 0;
   top: 18px;
-  width: 20px;
-  height: 35px;
+  zoom: 2.5;
 }
 .arrow {
   font-size: 30px;
@@ -68,7 +72,7 @@ main li {
 .todo-list,
 .done-list {
   border: 1px solid black;
-  background-color: lightyellow;
+  background-color: #294250;
 }
 .list-group-item {
   border: 1px solid black;

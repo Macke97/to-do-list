@@ -72,13 +72,13 @@ class App extends Base {
       <!-- End of row -->
       <div class="row mt-4">
         <div class="col-4 nopadding">
-          <h1>Todo List</h1>
+          <h1 class="text-center">Todo List</h1>
         </div>
         <div class="col-4 nopadding">
           <button class="doneBtn"><i class="fas fa-angle-double-right doneBtn justify-content-center"></i></button>
         </div>
         <div class="col-4 nopadding mr-3">
-          <h1>Done list</h1>
+          <h1 class="text-left">Done list</h1>
         </div>
       </div>
       <div class="row">
