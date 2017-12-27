@@ -11,15 +11,7 @@
       "app": {
         "↻": "$.app"
       },
-      "items": [
-        {
-          "list": {
-            "↻": "$.app.doneList"
-          },
-          "item": "ffdfhdfhd",
-          "⚙": "ListItem"
-        }
-      ],
+      "items": [],
       "⚙": "DoneList"
     },
     "listItem": {
