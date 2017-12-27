@@ -18,7 +18,6 @@ class ToDoList extends Base{
 
   removeItem(text){
     let removeIndex = this.items.findIndex((item)=> item.item == text);
-    console.log(removeIndex, text);
     if (removeIndex >= 0) {
       this.items.splice(removeIndex, 1);
     }
