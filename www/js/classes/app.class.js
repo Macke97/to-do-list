@@ -9,8 +9,8 @@ class App extends Base {
   render(el){
     //Call render from parent class (Base class)
     super.render(el);
-    // this.toDoList.render('.todo-list')
-    // toDoList.render('.todo-list')
+    $('ul.itemList > :first-child .btnUp').addClass('disabled');
+    $('ul.itemList > :last-child .btnDown').addClass('disabled');
     JSON._save('todo-list', {app: this});
   }
 
